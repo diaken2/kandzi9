@@ -4,6 +4,7 @@ const imgbbUploader = require("imgbb-uploader");
 const router=Router()
 const Todo=require("../schems/file")
 const Kandji=require("../schems/file")
+
 router.post("/temme",async(req,res)=>{
     console.log("Подключено к бэкэнду")
     const todos=await Todo.find({})
@@ -101,6 +102,17 @@ imgbbUploader("5e71f03e6521ab68c9a55e6b59526aa3", req.file.path)
     await todo.save()
   })
   .catch((error) => console.error(error));
+
+
+
+
+
+
+
+
+
+
+
 
 
 res.json(req.body)
