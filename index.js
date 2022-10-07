@@ -7,7 +7,7 @@ app.use(express.json({extended:true}))
 app.use("/api", routes)
 app.use(express.urlencoded({extended:false}))
 app.use('/images',express.static(path.join(__dirname,"images")))
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 const PORT=process.env.PORT || 5000
 const start=async()=>{
     try{
